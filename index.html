@@ -10,7 +10,7 @@
     <script type="text/javascript">
         
         //Establish the variables (may not end up needing these.. don't worry about them for now..)
-        var rps=[r, p, s]
+        var rps=["r", "p", "s"]
         var r = 0
         var p = 1
         var s = 2
@@ -21,8 +21,15 @@
         var acceptGame = confirm("Would you like to play Rock, Paper, Scissors?")
         
         //Main prompt 
-        var rpsPrompt = prompt("Please select either 'r, p, or s'"); //This may ultimately need to be in a for loop with conditions of running until score = 3
+        for (var i=0; i<10; i++) {  //for loop sets the prompt to run 10 times
+        var userSelect = prompt("Please select either 'r, p, or s'");
         
+        function random_item(rps){
+        return rps[Math.floor(Math.random()*rps.length)];
+        }
+
+        var cpuSelect = alert("The computer selects " + random_item(rps));
+        }
     </script>
 
 </body>
